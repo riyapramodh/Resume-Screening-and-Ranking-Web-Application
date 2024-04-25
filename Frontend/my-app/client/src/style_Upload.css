@@ -1,0 +1,321 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html {
+  font-size: 62.5%;
+}
+*:not(i){
+  font-family: sans-serif;
+}
+header{
+  position: fixed;
+  width: 100%;
+  background-color: #2E2E2E;
+  padding: 3rem 5rem;
+}
+nav {
+
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  
+}         
+.logo{
+  width: 50px;
+  cursor: pointer;
+}     
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  
+}
+nav  a{
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #E3D5CA;
+  font-weight: 600;
+}
+nav a#logo {
+  color: #000000;
+  font-weight: 700;
+}
+nav ul a {
+  color: #E3D5CA;
+  font-weight: 600;
+}
+nav ul a:hover{
+  border-bottom: 2px solid #D5BDAF;
+}
+body{
+  background-color: #E3D5CA;
+  
+}   
+
+#ham-menu {
+  display: none;
+}
+nav ul.active{
+  left:0;
+}
+
+
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 56.25%;
+  }
+  header {
+    padding: 2.2rem 5rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+  #ham-menu {
+    display: block;
+    color: #ffffff;
+  }
+  nav a#logo,
+  #ham-menu {
+    font-size: 3.2rem;
+  }
+  nav ul {
+    background-color: #2E2E2E;
+    position: fixed;
+    left: -100vw;
+    top: 73.6px;
+    width: 100vw;
+    height: calc(100vh - 73.6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s;
+    gap: 0;
+  }
+}
+@media only screen and (max-width: 575px) {
+  html {
+    font-size: 46.87%;
+  }
+  header {
+    padding: 2rem 3rem;
+  }
+  nav ul {
+    top: 65.18px;
+    height: calc(100vh - 65.18px);
+  }
+}
+
+#file-upload {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.upload-button {
+background-color: #2E2E2E;
+color: #E3D5CA;
+padding: 15px 30px; /* Increase padding for a bigger button */
+cursor: pointer;
+border-radius: 5px;
+font-size: 2rem; /* Increase font size for a bigger button */
+margin-bottom: 20px; /* Add spacing below the button */
+}
+
+#zipFileInput {
+  display: none;
+}
+
+#page-wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+}
+
+/* Requirements section styles */
+.requirements-content {
+background-color: #f7f7f7;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+text-align: left;
+}
+
+.requirements-content h1 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.requirements-content h2 {
+font-size: 20px;
+margin-top: 15px;
+}
+
+/* Form input styles */
+.requirements-content label {
+font-weight: bold;
+margin-top: 10px;
+}
+
+.requirements-content input[type="text"],
+.requirements-content input[type="number"],
+.requirements-content textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+}
+
+#requirementsContainer {
+margin-top: 100px; /* Adjust this margin to create space between header and requirements */
+padding: 20px; /* Add some padding to the requirements container */
+background-color: #fff; /* Add a background color to the requirements container */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+}
+
+/* Add this media query to adjust the margin and padding on smaller screens */
+@media only screen and (max-width: 767px) {
+#requirementsContainer {
+    margin-top: 50px; /* Reduce margin on smaller screens */
+    padding: 10px; /* Reduce padding on smaller screens */
+}
+}
+
+/* Submit button styles */
+#submit {
+width: 100%;
+padding: 15px 0;
+text-align: center;
+margin-top: 20px;
+border-radius: 25px;
+font-weight: bold;
+border: none;
+background: #202134d5;
+color: white;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#submit:hover {
+background: #202134;
+}
+
+#submit span {
+background: #dcc2c2;
+height: 100%;
+width: 0;
+border-radius: 25px;
+position: relative;
+left: 0;
+bottom: 0;
+z-index: -1;
+transition: 0.5s;
+}
+
+#submit:hover span {
+width: 100%;
+}
+
+.input-group {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.input-group input {
+flex-grow: 1;
+margin-right: 10px;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.add-button {
+background-color: #2E2E2E;
+color: #E3D5CA;
+border: none;
+border-radius: 5px;
+padding: 5px 10px;
+cursor: pointer;
+}
+
+.add-button:hover {
+background-color: #202134;
+}
+
+#otherEducationBtn {
+/* Add your styles here */
+background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+margin-bottom: 10px;
+}
+
+/* CSS styles for the Other Education form */
+#otherEducationForm {
+/* Add your styles here */
+display: none;
+margin-top: 20px;
+}
+
+#otherEducationForm form {
+/* Add your form styles here */
+max-width: 300px;
+margin: 0 auto;
+}
+
+#otherEducationForm form label, #otherEducationForm form input, #otherEducationForm form button {
+/* Add your label, input, and button styles here */
+display: block;
+margin-bottom: 10px;
+}
+
+#otherEducationForm form button {
+/* Add your button styles here */
+background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+}
+
+.submitNumResumes {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #172ef6;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submitNumResumes:hover {
+  background-color: #ddd;
+}
+
+.submitNumResumes i {
+  margin-right: 5px;
+}

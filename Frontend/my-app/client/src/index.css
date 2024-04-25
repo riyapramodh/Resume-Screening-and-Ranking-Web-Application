@@ -1,0 +1,424 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.resume-upload-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #2e2e2e;
+  padding: 3rem 5rem;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+nav a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #e3d5ca;
+  font-weight: 600;
+}
+
+nav a#logo {
+  color: #000000;
+  font-weight: 700;
+}
+
+nav ul a {
+  color: #e3d5ca;
+  font-weight: 600;
+}
+
+nav ul a:hover {
+  border-bottom: 2px solid #d5bdaf;
+}
+
+body {
+  background-color: #e3d5ca;
+}
+
+#ham-menu {
+  display: none;
+}
+
+nav ul.active {
+  left: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 56.25%;
+  }
+  header {
+    padding: 2.2rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+  #ham-menu {
+    display: block;
+    color: #ffffff;
+  }
+  nav a#logo,
+  #ham-menu {
+    font-size: 3.2rem;
+  }
+  nav ul {
+    background-color: #2e2e2e;
+    position: fixed;
+    left: -100vw;
+    top: 73.6px;
+    width: 100vw;
+    height: calc(100vh - 73.6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s;
+    gap: 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  html {
+    font-size: 46.87%;
+  }
+  header {
+    padding: 2rem 3rem;
+  }
+  nav ul {
+    top: 65.18px;
+    height: calc(100vh - 65.18px);
+  }
+}
+
+#file-upload {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.upload-button {
+  background-color: #2e2e2e;
+  color: #e3d5ca;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#zipFileInput {
+  display: none;
+}
+
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Additional styles go here */
+
+
+/* Requirements section styles */
+.requirements-content {
+background-color: #f7f7f7;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+text-align: left;
+}
+
+.requirements-content h1 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.requirements-content h2 {
+font-size: 20px;
+margin-top: 15px;
+}
+
+/* Form input styles */
+.requirements-content label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000000; /* Set the label text color */
+}
+
+.requirements-content input[type="text"],
+.requirements-content input[type="number"],
+.requirements-content textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+color: #000000; /* Set the input text color */
+}
+
+#requirementsContainer {
+margin-top: -600px; /* Adjust this margin to create space between header and requirements */
+padding: 20px; /* Add some padding to the requirements container */
+background-color: #fff; /* Add a background color to the requirements container */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+}
+
+/* Add this media query to adjust the margin and padding on smaller screens */
+@media only screen and (max-width: 767px) {
+#requirementsContainer {
+    margin-top: 50px; /* Reduce margin on smaller screens */
+    padding: 10px; /* Reduce padding on smaller screens */
+}
+}
+#submit {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  background: #202134d5;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Domain selection buttons */
+#domainSelection {
+  margin-top: -500px;
+}
+
+#domainSelection button {
+  background-color: rgb(39, 39, 40);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#domainSelection button:hover {
+  background-color: #616162;
+}
+
+
+
+
+
+#otherEducationBtn {
+  background-color: #202134;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+  
+  /* CSS styles for the Other Education form */
+  #otherEducationForm {
+  display: block;
+  position: relative; /* Adjust the positioning if necessary */
+  margin-top: 20px;
+  z-index: 1; /* Ensure the form stays above other elements */
+  }
+  
+  #otherEducationForm form {
+  max-width: 300px;
+  margin: 0 auto;
+  }
+  
+  #otherEducationForm form label,
+  #otherEducationForm form input,
+  #otherEducationForm form button {
+  display: block;
+  margin-bottom: 10px;
+  }
+  
+  #otherEducationForm form button {
+  background-color: #202134;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  }
+  #HideBtn {
+  background-color: #202134;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  z-index: 1; /* Adjust the z-index value to make sure it's below the navbar */
+  }
+
+#Intern, #Certification, #Languages, #Interests, #add-skill-btn {
+  background-color: #202134;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#InternTag, #CertificationTag, #LanguagesTag, #InterestsTag, #remove-skill-btn {
+  background-color: #c5a3a3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#ReactStars{
+  display:flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.skill-input-container {
+  position: relative;
+}
+
+.skill-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.skill-dropdown li {
+  padding: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+.custom-input {
+  width: 200px; /* Set the width as needed */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  /* Add any other styles you want to customize */
+}
+
+.custom-input:hover {
+  border-color: #585858; /* Change border color on hover */
+}
+
